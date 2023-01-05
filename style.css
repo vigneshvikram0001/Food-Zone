@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 22px;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+body{
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    padding: 1rem;
+    background-image:url(./image/img20\ Extra.jpeg);
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(3px);
+    background-repeat: no-repeat;
+}
+h1{
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(rgb(84, 0, 195), rgb(255, 51, 0));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    box-shadow: 0px 1px 22px rgba(0, 0, 0, 0.538);
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+.box{
+    height: 8rem;
+    border: 5px solid white;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.5s;
+    transform-origin: bottom;
+}
+.control{
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    padding: 10px 0px;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100px;
+    gap: 10px;
+    justify-content: space-between;
+}
+.btn-group button{
+    width: 100px;
+    height: 30px;
+    border: none;
+    font-size: 0.5rem;
+    background-color: #eb4d4b;
+    color: #fff;
+    border: 2px solid #eb4d4b;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s linear; 
+    border-radius: 3px;
+}
+.btn-group button:hover,
+.btn-group .btn-clicked{
+    background-color: transparent;
+    letter-spacing: 1.2px;
+    color:black;
+}
+#search{
+    width: 200px;
+    height: 30px;
+    outline: none;
+    border: 2px solid #eb4d4b;
+    padding: 0px 10px;
+    font-size: 0.6rem;
+    background-color: transparent;
+}
+.box img:hover{
+    transform: scale(1.2);
+}
+@media(max-width:450px){
+    .btn-group{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    #search{
+        width: 100%;
+    }
+    .container{
+        padding-top: 20px;
+    }
+}
